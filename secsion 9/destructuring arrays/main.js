@@ -24,8 +24,27 @@ const restaurant = {
 
     getFood: function(startIndex, mainIndex) {
         return [this.starterMenu[startIndex], this.mainMenu[mainIndex]];
-    }
+    },
 
+
+    openingHours: {
+
+        thu: {
+            open: 7,
+            close: 8
+        },
+
+        frid: {
+            open: 7,
+            close: 9
+        },
+
+        sat: {
+            open: 7,
+            close: 10
+        }
+
+    }
 };
 
 // Để lấy 2 phần tử đầu tiên của mảng
@@ -49,10 +68,19 @@ pt2 = temp;
 
 // console.log([a, b]);
 
+// console.log(restaurant.getFood(1, 2));
 
 
-console.log(restaurant.getFood(1, 2));
+const numbers = [2, 4, [5, 6]];
+// const [i, ,j] = numbers;
+// console.log(i,j);
+
+// const [i, ,[j, k]] = numbers;
+// console.log(i,j, k);
 
 
+// Default values
 
+const [p = 1, q = 1, r=1] = [8,9];
 
+console.log(p,q,r);
