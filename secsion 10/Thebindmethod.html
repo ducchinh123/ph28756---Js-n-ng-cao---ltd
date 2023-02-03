@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        const lufthansa = {
+
+            airline: 'Lufthansa',
+            istaCode: 'LH',
+            bookings: [],
+
+            book(flightNum, name) {
+
+                console.log(
+                    `${name} and ${this.airline} and ${this.istaCode} and ${flightNum}`
+                );
+
+                this.bookings.push({ flight: `${this.istaCode}${flightNum}`, name})
+
+            },
+        }
+
+
+        // lufthansa.book(239, "Hello Hello");
+        // console.log(lufthansa);
+
+
+        const eurowings = {
+            name: 'Eurowings',
+            istaCode: 'EW',
+            bookings: []
+        };
+
+        const book = lufthansa.book;
+
+        // book.call(eurowings,123, '123');
+
+        const swiss = {
+
+            airline: 'Welcome to HN',
+            istaCode: 'LX',
+            bookings: []
+        };
+
+        // const flightData = [583, 'Geoge Cooper'];
+
+        // book.apply(swiss, flightData);
+
+        const bookEW = book.bind(eurowings);
+
+        bookEW(23, 'ABC');
+
+    </script>
+</body>
+</html>

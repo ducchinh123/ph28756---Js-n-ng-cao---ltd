@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        const flight = 'LH234';
+        const jonas = {
+
+            name: 'Jonas Schmedtmann',
+            passport: 123456789
+        }
+
+
+        const checkIn = function(flightNum, passenger) {
+
+            flightNum = "LH999";
+            passenger.name = `Mr. ${passenger.name}`;
+
+            if (passenger.passport === 123456789) {
+
+                alert("Welcome to Vietnammese");
+                
+            }else {
+
+                alert("Welcome to Japan");
+            }
+        };
+
+        checkIn(flight, jonas);
+
+
+        const flightNum = flight;
+        const passenger = jonas;
+
+        const newPassport = function (person) {
+
+            person.passport = Math.trunc(Math.random() * 100);
+
+           
+
+
+        }
+
+
+        newPassport(jonas);
+
+
+
+    </script>
+</body>
+
+</html>
